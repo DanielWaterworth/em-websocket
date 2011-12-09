@@ -36,6 +36,11 @@ module EventMachine
         @state = :closed
         @connection.trigger_on_close
       end
+
+      def ping
+        # Overridden in subclass
+        false
+      end
     end
   end
 end
