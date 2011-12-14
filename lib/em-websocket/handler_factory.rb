@@ -75,6 +75,8 @@ module EventMachine
         protocol = (secure ? "wss" : "ws")
         request['host'] = Addressable::URI.parse("#{protocol}://"+request['host'])
 
+        p version
+
         case version
         when 75
           Handler75.new(connection, request, debug)

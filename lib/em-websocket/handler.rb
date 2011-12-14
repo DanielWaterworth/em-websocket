@@ -39,6 +39,7 @@ module EventMachine
 
       def ping
         # Overridden in subclass
+        p :handler_ping
         false
       end
     end

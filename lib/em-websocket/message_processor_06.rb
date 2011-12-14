@@ -47,11 +47,12 @@ module EventMachine
           @connection.trigger_on_message(application_data)
         end
       end
-    end
 
-    def ping
-      send_frame(:ping, '')
-      true
+      def ping
+        p :mp_06
+        send_frame(:ping, '')
+        true
+      end
     end
   end
 end
